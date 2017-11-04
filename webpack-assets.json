@@ -1,0 +1,20 @@
+{
+  "javascript": {
+    "other": "/0-16c00e75d53e6a6127c3.js",
+    "home": "/1-16c00e75d53e6a6127c3.js",
+    "vendor": "/vendor-16c00e75d53e6a6127c3.js",
+    "main": "/main-16c00e75d53e6a6127c3.js",
+    "manifest": "/manifest-16c00e75d53e6a6127c3.js"
+  },
+  "styles": {},
+  "assets": {
+    "./src/static/Avater.jpg": "/a598331339ca8006eb5827ac0f4fbe6d.jpg",
+    "./src/static/Avater2.jpg": "/7331c35cb0bd3c412ab3e7dc9abad3b4.jpg",
+    "./src/styles/index.scss": {
+      "_style": "html, body {\n  height: 100%;\n  margin: 0; }\n\nbody {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  text-align: center;\n  color: #fe751a; }\n\na {\n  color: inherit;\n  text-decoration: none; }\n\nh1 {\n  font-size: 60px;\n  margin: 0; }\n"
+    }
+  },
+  "webpack": {
+    "version": "3.8.1"
+  }
+}
