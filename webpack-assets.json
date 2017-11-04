@@ -1,10 +1,8 @@
 {
   "javascript": {
-    "other": "/0-16c00e75d53e6a6127c3.js",
-    "home": "/1-16c00e75d53e6a6127c3.js",
-    "vendor": "/vendor-16c00e75d53e6a6127c3.js",
-    "main": "/main-16c00e75d53e6a6127c3.js",
-    "manifest": "/manifest-16c00e75d53e6a6127c3.js"
+    "vendor": "/vendor-76c37be2ead620ef414a.js",
+    "main": "/main-76c37be2ead620ef414a.js",
+    "manifest": "/manifest-76c37be2ead620ef414a.js"
   },
   "styles": {},
   "assets": {
@@ -15,6 +13,6 @@
     }
   },
   "webpack": {
-    "version": "3.8.1"
+    "version": "3.7.1"
   }
 }
