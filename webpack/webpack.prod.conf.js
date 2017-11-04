@@ -19,7 +19,7 @@ const webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('.
 module.exports = merge(baseWebpackConfig, {
   devtool: 'source-map',
   entry: {
-    main: ['./src/index.tsx'],
+    main: ['./src/index.js'],
   },
   output: {
     path: assetsPath,

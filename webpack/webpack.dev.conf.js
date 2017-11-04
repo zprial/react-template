@@ -22,7 +22,7 @@ module.exports = merge(baseWebpackConfig, {
     main: [
       'react-hot-loader/patch',
       'webpack-hot-middleware/client?path=http://' + host + ':' + port + '/__webpack_hmr',
-      './src/index.tsx',
+      './src/index.js',
     ],
   },
   output: {
