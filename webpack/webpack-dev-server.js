@@ -1,6 +1,7 @@
 const Express = require('express')
 const webpack = require('webpack')
 const opn = require('opn')
+const path = require('path')
 
 const webpackConfig = require('./webpack.dev.conf')
 
@@ -19,8 +20,7 @@ const serverOptions = {
   lazy: false,
   publicPath: webpackConfig.output.publicPath,
   headers: { 'Access-Control-Allow-Origin': '*' },
-  stats: { colors: true },
-  historyApiFallback: true
+  stats: { colors: true }
 }
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, serverOptions)
@@ -40,7 +40,13 @@ app.use(devMiddleware)
 app.use(hotMiddleware)
 
 // 代理静态资源
-app.use(Express.static(require('path').join(__dirname,'../dist')));
+app.use(Express.static(require('path').join(__dirname, '../dist')));
+
+app.get('*', (req, res) => {
+  res.end(
+    devMiddleware.fileSystem.readFileSync(path.resolve(webpackConfig.output.path, 'index.html'))
+  )
+})
 
 let _resolve
 /* eslint-disable */
