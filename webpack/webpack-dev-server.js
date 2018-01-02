@@ -1,6 +1,7 @@
 const Express = require('express');
 const webpack = require('webpack');
 const opn = require('opn');
+const path = require('path')
 
 const webpackConfig = require('./webpack.dev.conf');
 
@@ -41,6 +42,12 @@ app.use(hotMiddleware);
 
 // 代理静态资源
 app.use(Express.static(require('path').join(__dirname,'../dist')));
+
+app.get('*', (req, res) => {
+  res.end(
+    devMiddleware.fileSystem.readFileSync(path.resolve(webpackConfig.output.path, 'index.html'))
+  )
+})
 
 let _resolve;
 /* eslint-disable */
